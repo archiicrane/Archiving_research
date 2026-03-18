@@ -1,17 +1,17 @@
 const archiveImages = [
   {
     id: "img-001",
-    title: "Futurist Competition Drawing",
-    year: 1972,
-    tags: ["futurist", "retro", "utopian", "jetsons"],
+    title: "Campus Plan",
+    year: 1956,
+    tags: ["landscape", "campus", "site plant"],
     imageUrl: "https://archivingresearch.s3.us-east-1.amazonaws.com/Alan+Hamilton+Rider_Campus+Plan_.jpg",
-    description: "Speculative futuristic architectural drawing."
+    description: "A landscape plan of a proposed college campus."
   },
   {
     id: "img-002",
-    title: "Concept Board 02",
-    year: 1984,
-    tags: ["competition", "board", "graphic"],
+    title: "Dining Hall Interior",
+    year: 1956,
+    tags: ["interior", "board", "graphic"],
     imageUrl: "https://archivingresearch.s3.us-east-1.amazonaws.com/Alan+Hamilton+Rider_Dinning+Hall+Interior_.jpg",
     description: "Competition board with bold graphic layout."
   },
