@@ -58,5 +58,34 @@ const archiveImages = [
     tags: ["urban", "visionary", "linework"],
     imageUrl: "https://archivingresearch.s3.us-east-1.amazonaws.com/Unknown_A+center+for+people_s+consciousness_1st+half.jpg",
     description: "Visionary urban sketch with expressive linework."
+  },
+
+  {
+    id: "img-008",
+    title: "Urban Vision Sketch",
+    year: 1968,
+    tags: ["urban", "visionary", "linework"],
+    imageUrl: "https://archivingresearch.s3.us-east-1.amazonaws.com/Unknown_A+center+for+people_s+consciousness_2nd+half.jpg",
+    description: "Visionary urban sketch with expressive linework."
+  },
+
+
+  {
+    id: "img-009",
+    title: "Urban Vision Sketch",
+    year: 1968,
+    tags: ["urban", "visionary", "linework"],
+    imageUrl: "https://archivingresearch.s3.us-east-1.amazonaws.com/Unknown_A+center+for+people_s+consciousness_joined-01.jpg",
+    description: "Visionary urban sketch with expressive linework."
+  },
+
+  
+  {
+    id: "img-009",
+    title: "Urban Vision Sketch",
+    year: 1968,
+    tags: ["urban", "visionary", "linework"],
+    imageUrl: "https://archivingresearch.s3.us-east-1.amazonaws.com/Unknown_steel+container+units_section%26siteplan.jpg",
+    description: "Visionary urban sketch with expressive linework."
   }
 ];
