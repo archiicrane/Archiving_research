@@ -18,7 +18,7 @@ const archiveImages = [
   {
     id: "img-003",
     title: "Urban Vision Sketch",
-    year: 1968,
+    year: 1967,
     tags: ["urban", "visionary", "linework"],
     imageUrl: "https://archivingresearch.s3.us-east-1.amazonaws.com/Lloyd+G.+Walter+Jr._Cultural+center+plans_interior+perspective_.jpg",
     description: "Visionary urban sketch with expressive linework."
