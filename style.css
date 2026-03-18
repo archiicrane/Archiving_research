@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f2;
+  color: #111;
+}
+
+.site-header {
+  padding: 24px 32px 12px;
+  border-bottom: 1px solid #ddd;
+  background: white;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: #666;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  padding: 24px 32px;
+}
+
+.left-panel,
+.right-panel {
+  min-width: 0;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px 16px;
+  border: none;
+  background: #111;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: #eee;
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+
+.card-meta {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  background: #efefef;
+  border-radius: 999px;
+}
+
+.ai-box {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 16px;
+  position: sticky;
+  top: 24px;
+}
+
+.ai-box h2 {
+  margin-top: 0;
+}
+
+.ai-note {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.ai-status {
+  margin-top: 10px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.ai-response {
+  margin-top: 14px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-box {
+    position: static;
+  }
+}

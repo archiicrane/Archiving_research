@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drawing Archive</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Drawing Archive</h1>
+    <p class="subtitle">Public archive prototype</p>
+  </header>
+
+  <main class="layout">
+    <section class="left-panel">
+      <div class="search-bar">
+        <input id="searchInput" type="text" placeholder="Search drawings by title, tags, year..." />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <div id="gallery" class="gallery"></div>
+    </section>
+
+    <aside class="right-panel">
+      <div class="ai-box">
+        <h2>Ask the Archive</h2>
+        <p class="ai-note">
+          Example: “Show me Jetson-style drawings” or “Find futuristic competition boards”
+        </p>
+
+        <textarea id="aiInput" placeholder="Ask about the archive..."></textarea>
+        <button id="askAiBtn">Ask AI</button>
+
+        <div id="aiStatus" class="ai-status"></div>
+        <div id="aiResponse" class="ai-response"></div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="images.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
