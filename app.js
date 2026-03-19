@@ -70,7 +70,7 @@ askAiBtn.addEventListener("click", async () => {
   aiResponse.textContent = "";
 
   try {
-    const res = await fetch("/api/ask", {
+    const res = await fetch("/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
