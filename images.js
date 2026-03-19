@@ -10,13 +10,8 @@ const archiveImages = [
   {
     id: "img-002",
     title: "Dining Hall Interior",
-<<<<<<< HEAD
     year: 1984,
     tags: ["competition", "board", "graphic"],
-=======
-    year: 1956,
-    tags: ["interior", "board", "graphic"],
->>>>>>> 1a71eed3b385dc57956fbee50efc2c879b83d073
     imageUrl: "https://archivingresearch.s3.us-east-1.amazonaws.com/Alan+Hamilton+Rider_Dinning+Hall+Interior_.jpg",
     description: "Competition board with bold graphic layout."
   },
