@@ -4,20 +4,28 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { question, archiveImages } = req.body;
+    if (!process.env.OPENAI_API_KEY) {
+      return res.status(500).json({
+        error: "Missing OPENAI_API_KEY on server"
+      });
+    }
 
-    if (!question) {
+    const { question, archiveImages } = req.body || {};
+
+    if (!question || !String(question).trim()) {
       return res.status(400).json({ error: "Missing question" });
     }
 
-    const archiveSummary = archiveImages.map(item => ({
-      id: item.id,
-      title: item.title,
-      year: item.year,
-      tags: item.tags,
-      description: item.description,
-      imageUrl: item.imageUrl
-    }));
+    const archiveSummary = Array.isArray(archiveImages)
+      ? archiveImages.map((item) => ({
+          id: item?.id ?? "",
+          title: item?.title ?? "",
+          year: item?.year ?? "",
+          tags: item?.tags ?? [],
+          description: item?.description ?? "",
+          imageUrl: item?.imageUrl ?? ""
+        }))
+      : [];
 
     const prompt = `
 You are an assistant for an architecture drawing archive.
@@ -37,7 +45,7 @@ ${question}
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`
       },
       body: JSON.stringify({
         model: "gpt-4.1-mini",
@@ -49,18 +57,20 @@ ${question}
 
     if (!response.ok) {
       return res.status(response.status).json({
-        error: data.error?.message || "OpenAI request failed"
+        error: data?.error?.message || "OpenAI request failed",
+        details: data
       });
     }
 
     const answer =
       data.output_text ||
+      data.output?.[0]?.content?.[0]?.text ||
       "I could not generate a response.";
 
     return res.status(200).json({ answer });
   } catch (error) {
     return res.status(500).json({
-      error: error.message || "Server error"
+      error: error?.message || "Server error"
     });
   }
 }

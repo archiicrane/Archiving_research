@@ -9,7 +9,7 @@ const archiveImages = [
   },
   {
     id: "img-002",
-    title: "Concept Board 02",
+    title: "Dining Hall Interior",
     year: 1984,
     tags: ["competition", "board", "graphic"],
     imageUrl: "https://archivingresearch.s3.us-east-1.amazonaws.com/Alan+Hamilton+Rider_Dinning+Hall+Interior_.jpg",
@@ -81,7 +81,7 @@ const archiveImages = [
 
   
   {
-    id: "img-009",
+    id: "img-010",
     title: "Urban Vision Sketch",
     year: 1968,
     tags: ["urban", "visionary", "linework"],
